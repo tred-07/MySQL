@@ -85,16 +85,38 @@
                        select * from test;<br> Work: Declaring a table using "constraint" key-word.</li>
                 <li id="li-id-5"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: drop table test;
+                    create table test(
+                     age int,
+                     name varchar(50),
+                     email varchar(50),
+                     contact char(11),
+                     -- constraint "custom name rule" condition 
+                     constraint pk_rule primary key (contact),
+                     constraint age_rule check (age>18),
+                     constraint email_rule unique(email)
+                    );
+                    select * from test;<br> Work: Declaring a table using rule name.</li>
                 <li id="li-id-6"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: create table library(
+                        bookname varchar(40) primary key,
+                        whoHiredRoll int,
+                        foreign key (whoHiredRoll) references test(roll)
+                       );
+                       select * from library;<br> Work: Foreign key and Feference key</li>
                 <li id="li-id-7"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: create table multiple_primary_key(
+                        course_name varchar(40),
+                        course_code char(4),
+                        constraint primary key(course_name,course_code)
+                        );
+                        select * from multiple_primary_key; <br> Work: For multiple_primary_key</li>
                 <li id="li-id-8"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select name from test;
+                    select * from test; -- for all data<br> Work: For show table data</li>
                 <li id="li-id-9"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     Query: <br> Work:</li>
