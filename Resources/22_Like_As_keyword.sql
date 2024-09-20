@@ -1,0 +1,1 @@
+select * from employee where designation like '%SWE%';

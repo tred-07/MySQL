@@ -17,6 +17,7 @@
 <body class="bg-emerald-700">
     <main class="">
         <section class="section-1 m-[25px] p-[25px] mx-[50px]">
+            <h1 class="text-center text-[35px] font-black text-white">Learn MySQL <br> <br><hr> <br></h1>
             <ol class="list-decimal">
                 <li
                     class="text-yellow-50 font-bold text-[24px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[4px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
@@ -139,28 +140,48 @@
                     Query: select * from marks where mark>=90; <br> Work: Comparison Operator</li>
                 <li id="li-id-11"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: create table employee(
+                        name varchar(60),
+                        designation varchar(10),
+                        salary int,
+                        age int
+                        );
+                        insert into employee (name,designation,salary,age) values ('A1','Sr. SWE',60000,28);
+                        insert into employee (name,designation,salary,age) values ('A2','Jr. SWE',50000,25);
+                        insert into employee (name,designation,salary,age) values ('A3','Jr. SWE',50000,26);
+                        insert into employee (name,designation,salary,age) values ('A4','Sr. SWE',65000,25);
+                        insert into employee (name,designation,salary,age) values ('A5','Team Lead',95000,32);
+                        insert into employee (name,designation,salary,age) values ('A6','Team Lead',95000,35);
+                        insert into employee (name,designation,salary,age) values ('A7','Manager',150000,40);
+                        select distinct * from employee;
+                        <br> Work: Distinct keyword Syntax</li>
                 <li id="li-id-12"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee order by age asc;
+                    select * from employee order by age desc; <br> Work: Ascending order</li>
                 <li id="li-id-13"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee order by age asc;
+                    select * from employee order by age desc;<br> Work: Descending Order</li>
                 <li id="li-id-14"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee order by salary desc limit 2,2; 
+                    select * from employee order by salary desc limit 2 offset 2; <br> Work: Limit and Offset keyword</li>
                 <li id="li-id-15"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee order by salary desc limit 3 offset 2;
+                    select * from employee order by salary desc; <br> Work: Offset Keyword</li>
                 <li id="li-id-16"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee where name in('A2','A3','A4');
+                    <br> Work: In keyword</li>
                 <li id="li-id-17"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee where name not in('A2','A3','A4');
+                    select * from employee where name not in('A2','A3','A4');<br> Work: Not in keyword</li>
                 <li id="li-id-18"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    Query: <br> Work:</li>
+                    Query: select * from employee where designation like '%SWE%';<br> Work: Like key word</li>
                 <li id="li-id-19"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[25px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     Query: <br> Work:</li>
