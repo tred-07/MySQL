@@ -1,6 +1,7 @@
 # https://tred-07.github.io/MySQL/
-
-
+#
+#
+#
 # How to install mysql on linux
 # ========================================================================
 # Step-1: Mysql installation: [ sudo  apt install mysql-server ]
@@ -16,9 +17,8 @@
 #
 # Mysql server start command: [   sudo systemctl status mysql.service   ]
 #
-# Mysql workbench gui installation: Download the .deb , .rpm file from this link https://dev.mysql.com/downloads/workbench/ and install the file. Before installing 
-#                                   this file check the hash of this. Command: [ "hash-algo"+sum file-name | grep hash-key ]
-
-
-
+# Mysql workbench gui installation: Download the .deb , .rpm file from this link https://dev.mysql.com/downloads/workbench/ and install the file. Before installing this file check the hash of this. Command: [ "hash-algo"+sum file-name | grep hash-key ]
+#
+#
+#
 # Thanks for reading. Enjoy the mysql show.
