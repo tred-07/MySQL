@@ -185,12 +185,22 @@
                 </li>
                 <li id="li-id-26"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- Group by query
+                    select max(salary),department_id from employees group by department_id;
                 </li>
                 <li id="li-id-27"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- Having
+                    select max(salary),department_id from employees group by department_id having max(salary)>5000;
                 </li>
                 <li id="li-id-28"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- Alter table query used for adding any new column or row. Not data change, change structural
+                    change.
+                    alter table employees add column email_id varchar(40); -- for add a column
+                    select * from employees;
+                    alter table employees drop column email_id; -- for delete a column
+                    alter table employees modify column email varchar(60); -- for modify column data type
                 </li>
                 <li id="li-id-29"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
