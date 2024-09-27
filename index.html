@@ -215,9 +215,9 @@
                 <li id="li-id-30"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     -- second max
-<br>
+                    <br>
                     select distinct * from employees order by salary desc limit 1,1;
-<br>
+                    <br>
                     select distinct * from employees where salary&GreaterEqual; (select max(salary) from employees)
                     limit 1;
                 </li>
@@ -228,7 +228,7 @@
                     <br>
                     select * from employees as emp where salary>( select salary from employees as mgr where
                     emp.manager_id=mgr.employee_id);
-<br>
+                    <br>
                     -- Sample question: How many employees job is same to manager job? <br>
                     select * from employees as emp where job_id=( select job_id from employees as mgr where
                     emp.manager_id=mgr.employee_id);
@@ -256,6 +256,13 @@
                 </li>
                 <li id="li-id-34"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- Join Query With JOIN Keyword <br>
+
+                    select First_name,department_name from employees join departments on
+                    employees.department_id=departments.department_id;
+                    <br>
+                    select First_name,department_name from employees join departments using(department_id);
+
                 </li>
                 <li id="li-id-35"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
