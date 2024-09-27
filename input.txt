@@ -1,0 +1,2 @@
+1
+select department_name,count(*) from employees join departments on employees.department_id=departments.department_id group by department_name;
