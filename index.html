@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body class="bg-fuchsia-950">
+<body class="bg-cyan-300">
     <main class="">
         <section class="section-1 m-[25px] p-[25px] mx-[50px]">
             <h1 class="text-center text-[35px] font-black text-white">Learn MySQL <br> <br>
@@ -186,17 +186,20 @@
                 <li id="li-id-26"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     -- Group by query
+                    <br>
                     select max(salary),department_id from employees group by department_id;
                 </li>
                 <li id="li-id-27"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     -- Having
+                    <br>
                     select max(salary),department_id from employees group by department_id having max(salary)>5000;
                 </li>
                 <li id="li-id-28"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     -- Alter table query used for adding any new column or row. Not data change, change structural
                     change.
+                    <br>
                     alter table employees add column email_id varchar(40); -- for add a column
                     select * from employees;
                     alter table employees drop column email_id; -- for delete a column
@@ -212,37 +215,44 @@
                 <li id="li-id-30"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
                     -- second max
-
+<br>
                     select distinct * from employees order by salary desc limit 1,1;
-
+<br>
                     select distinct * from employees where salary&GreaterEqual; (select max(salary) from employees)
                     limit 1;
                 </li>
                 <li id="li-id-31"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    -- Advanced Query
+                    -- Advanced Query <br>
                     -- Sample question: How many employee get salary more than manager? Use system database.
+                    <br>
                     select * from employees as emp where salary>( select salary from employees as mgr where
                     emp.manager_id=mgr.employee_id);
-
-                    -- Sample question: How many employees job is same to manager job?
+<br>
+                    -- Sample question: How many employees job is same to manager job? <br>
                     select * from employees as emp where job_id=( select job_id from employees as mgr where
                     emp.manager_id=mgr.employee_id);
 
                 </li>
                 <li id="li-id-32"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
-                    -- Common Table Expression
+                    -- Common Table Expression <br>
                     with avgit as(
                     select avg(salary) as sal1 from employees
                     ),
                     maxs as(
                     select max(salary) as sal2 from employees
                     )
-                    select * from employees where salary>(select sal1 from avgit) and salary&GreaterEqual;(select sal2 from maxs);
-                        </li>
+                    select * from employees where salary>(select sal1 from avgit) and salary&GreaterEqual;(select sal2
+                    from maxs);
+                </li>
                 <li id="li-id-33"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- JOINING TABLE WITHOUT JOIN KEYWORD <br>
+                    -- SYNTAX select columns of both table select table names(comma separated) base contidion <br>
+                    <br>
+                    SELECT *,DEPARTMENT_NAME FROM employees,departments WHERE
+                    employees.DEPARTMENT_ID=departments.DEPARTMENT_ID;
                 </li>
                 <li id="li-id-34"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
