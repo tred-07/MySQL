@@ -1,0 +1,1 @@
+select * from employees where department_id!='90' and salary>5000;
