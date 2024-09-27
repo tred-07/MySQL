@@ -266,6 +266,42 @@
                 </li>
                 <li id="li-id-35"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
+                    -- Show every employees manager id from system database
+                    <br>
+                    select First_name,manager_id from employees;
+<br>
+                    -- Show every employees manager name from system database
+<br>
+                    select employee.First_name,manager.First_name from employees as employee join employees as manager
+                    on employee.employee_id=manager.manager_id;
+<br>
+                    -- Show the department name which has no employee from system database
+    <br>
+                    select departments.department_name
+                    from departments
+                    left join employees
+                    on departments.department_id=employees.department_id
+                    where employee_id is null;
+<br>
+                    -- Show employees first_name, salary and difference salary between average salary of his department
+    <br>
+                    from system database
+                    select employees.first_name,employees.salary,(select avg(salary) from employees where
+                    department_id=departments.department_id)
+                    from employees
+                    join departments
+                    on employees.department_id=departments.department_id;
+<br>
+                    -- Show the departments name where the salary is greater than a certain amount.
+    <br>
+                    select department_name
+                    from departments
+                    join employees
+                    on departments.department_id=employees.department_id
+                    group by department_name
+                    having avg(salary)>5000;
+
+
                 </li>
                 <li id="li-id-36"
                     class="text-yellow-50 font-bold text-[25px] hover:bg-black hover:text-white hover:p-[25px] hover:rounded-[5px] border-[5px] border-solid border-indigo-500 p-[25px] my-[12.5px] rounded-[25px]">
