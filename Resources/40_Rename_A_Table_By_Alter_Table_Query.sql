@@ -1,0 +1,1 @@
+Alter table employees rename employees;
