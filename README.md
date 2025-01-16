@@ -1,7 +1,8 @@
 # https://tred-07.github.io/MySQL/
 #
-#
-#
+# How to install MySQL on Windows
+# ========================================================================
+# Step 1: 
 # How to install mysql on linux
 # ========================================================================
 # Step-1: Mysql installation: [ sudo  apt install mysql-server ]
