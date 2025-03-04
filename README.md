@@ -12,12 +12,16 @@
 # Step-2: Add password
 #
 # [   sudo mysql (if you have no root password, otherwise skip this command)    ]
-# [   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';  ]
+# [   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';  ] use 1 capital letter and special character
 #
 # Enter mysql after set password: [   sudo mysql -u root -p   ]
 #
 # Mysql server start command: [   sudo systemctl status mysql.service   ]
 #
+# Download Datagrip from Ubuntu app store: 
+# [ FLUSH PRIVILEGES; ] run this command in mysql terminal
+
+
 # Mysql workbench gui installation: Download the .deb , .rpm file from this link https://dev.mysql.com/downloads/workbench/ and install the file. Before installing this file check the hash of this. Command: [ "hash-algo"+sum file-name | grep hash-key ]
 #
 #
